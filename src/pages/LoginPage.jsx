@@ -10,11 +10,12 @@ export default function LoginPage() {
 
         <form className="login-form">
 
+{/* email */}
           <div className="input-group">
             <label>Email</label>
             <input type="email" placeholder="you@example.com" />
           </div>
-
+{/* password */}
           <div className="input-group">
             <label>Password</label>
             <input type="password" placeholder="••••••••" />
