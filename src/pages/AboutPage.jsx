@@ -42,6 +42,16 @@ export default function AboutPage() {
           <h2>Technologies Used</h2>
           <p>React.js</p>
         </div>
+        <div className="Report">
+          <h2>Use of Artificial Intelligence in Project Design</h2>
+<p>in this project,we untilized artifical intelligence(AI) to support the design phase and enhance the quality of the outputs.
+  AI tools were used to  generate innoative design ideas,suggest suitable colors and layouts , and create  user interface(UI)
+  Components more quikly and accurately.AI also helped in developing prototypes,allowing us to visualize the interfacee
+  before the actual development process.</p>
+  <p></p>
+
+        </div>
+
 
       </div>
     </div>

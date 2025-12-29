@@ -1,13 +1,13 @@
-/* Center container */
+/*  Center container   */
 .login-container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #F3F4F6; /* light background */
+  background: #F3F4F6; /*  light background  */
 }
 
-/* Card */
+/* cards */
 .login-card {
   width: 380px;
   background: #fff;
@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-/* Title */
+/*  Title  */
 .login-title {
   margin: 0;
   color: #4F46E5;
@@ -83,7 +83,7 @@
   transform: translateY(-1px);
 }
 
-/* Sign up text */
+/* Sign  up text */
 .signup-text {
   margin-top: 15px;
   font-size: 14px;
