@@ -1,44 +1,42 @@
-import "./RegisterPage.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function RegisterPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      // إرسال طلب إنشاء مستخدم جديد للسيرفر
+      await axios.post("http://localhost:5000/api/register", { email, password });
+      alert("Registration successful! Now you can login.");
+      navigate("/login"); // التوجه لصفحة تسجيل الدخول بعد النجاح
+    } catch (err) {
+      setError(err.response?.data?.error || "Registration failed");
+    }
+  };
+
   return (
-    <div className="register-container">
-      <div className="register-card">
-
-        <h2 className="register-title">Create Account</h2>
-        <p className="register-sub">Join our store community</p>
-
-        <form className="register-form">
-
-          <div className="input-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="Your full name" />
-          </div>
-
+    <div className="login-container">
+      <div className="login-card">
+        <h2 className="login-title">Create Account</h2>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        <form className="login-form" onSubmit={handleRegister}>
           <div className="input-group">
             <label>Email</label>
-            <input type="email" placeholder="you@example.com" />
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </div>
-
           <div className="input-group">
             <label>Password</label>
-            <input type="password" placeholder="••••••••" />
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
-
-          <div className="input-group">
-            <label>Confirm Password</label>
-            <input type="password" placeholder="••••••••" />
-          </div>
-
-          <button className="register-btn">Create Account</button>
-
-          <p className="login-text">
-            Already have an account?
-            <span> Login</span>
-          </p>
-
+          <button type="submit" className="login-btn">Register</button>
         </form>
-
       </div>
     </div>
   );
