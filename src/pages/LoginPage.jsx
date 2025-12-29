@@ -46,12 +46,8 @@ export default function LoginPage() {
         {/* عرض الخطأ إن وجد */}
         {error && <p style={{ color: "red", textAlign: "center", marginBottom: "10px" }}>{error}</p>}
 
-<<<<<<< HEAD
         <form className="login-form" onSubmit={handleSubmit}>
           {/* حقل الإيميل */}
-=======
-{/* email */}
->>>>>>> 14a522cd9f72998e0c256eec0fb045a8bbc020b4
           <div className="input-group">
             <label>Email</label>
             <input 
@@ -62,12 +58,8 @@ export default function LoginPage() {
               required
             />
           </div>
-<<<<<<< HEAD
 
           {/* حقل كلمة المرور */}
-=======
-{/* password */}
->>>>>>> 14a522cd9f72998e0c256eec0fb045a8bbc020b4
           <div className="input-group">
             <label>Password</label>
             <input 
